@@ -1,10 +1,16 @@
 def even_number_of_evens(numbers):
-    if len(numbers) >=2:
+    evens = 0
+    if len(numbers) == 2:
         for number in numbers:
             if number % 2 == 1:
                 return False
             else:
+                evens = evens + 1
                 return True
+        if evens == 2:
+            return True
+        else:
+            return False
     elif len(numbers) < 2:
         return False
         
